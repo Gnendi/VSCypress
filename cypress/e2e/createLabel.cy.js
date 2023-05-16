@@ -21,5 +21,10 @@ describe ('label', () => {
         CreateLabel.nextBtn
         CreateLabel.modalScrumCheckbox
         CreateLabel.nextBtn
+        CreateLabel.nextBtn
+        CreateLabel.nextBtn
+        CreateLabel.nextBtn
+        CreateLabel.labelBtn
+
     })
 })

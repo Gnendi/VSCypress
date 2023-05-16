@@ -20,11 +20,15 @@ class createLabel {
     }
 
     get addNewBoard () {
-        return cy.get('.vs-c-img--board-avatar').click()
+        return cy.get('.vs-c-media__object > .vs-c-img--avatar').click()
     }
 
     get modalScrumCheckbox () {
         return cy.get('[name="type_scrum"]').click()
+    }
+
+    get labelBtn () {
+        return cy.get('[data-cy="board-labels"] > [effect="dark"] > :nth-child(2) > .vs-c-site-logo').click()
     }
 }
 
