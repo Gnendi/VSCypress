@@ -55,6 +55,12 @@ class createLabel {
         return cy.get('.vs-c-modal__footer > .vs-u-text--right > .el-button--success').click()
     }
 
+    get backlogBtn () {
+        return cy.get('[data-cy="board-backlog"] > span > div > .vs-c-site-logo').click()
+    }
+
+    
+
 }
 
 export const CreateLabel = new createLabel
