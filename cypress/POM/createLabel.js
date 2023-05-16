@@ -47,6 +47,14 @@ class createLabel {
         return cy.get('.vs-c-btn--primary').click()
     }
 
+    get deleteBtn () {
+        return cy.get('.vs-c-btn--warning').click()
+    }
+
+    get modalRemoveLabelYesBtn () {
+        return cy.get('.vs-c-modal__footer > .vs-u-text--right > .el-button--success').click()
+    }
+
 }
 
 export const CreateLabel = new createLabel

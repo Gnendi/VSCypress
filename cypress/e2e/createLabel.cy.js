@@ -29,6 +29,8 @@ describe ('label', () => {
         CreateLabel.labelNameInput
         CreateLabel.descriptionInput
         CreateLabel.saveBtn
+        CreateLabel.deleteBtn
+        CreateLabel.modalRemoveLabelYesBtn
 
     })
 })
