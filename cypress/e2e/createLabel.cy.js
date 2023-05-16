@@ -25,6 +25,10 @@ describe ('label', () => {
         CreateLabel.nextBtn
         CreateLabel.nextBtn
         CreateLabel.labelBtn
+        CreateLabel.editLabel
+        CreateLabel.labelNameInput
+        CreateLabel.descriptionInput
+        CreateLabel.saveBtn
 
     })
 })

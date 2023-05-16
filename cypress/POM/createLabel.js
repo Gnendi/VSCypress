@@ -30,6 +30,23 @@ class createLabel {
     get labelBtn () {
         return cy.get('[data-cy="board-labels"] > [effect="dark"] > :nth-child(2) > .vs-c-site-logo').click()
     }
+
+    get editLabel () {
+        return cy.get(':nth-child(9) > .el-table_1_column_6 > .cell > .vs-c-labels-table-worklog-cell > .vs-u-text--right > a.el-button > .el-icon-edit').click()
+    }
+
+    get labelNameInput () {
+        return cy.get(':nth-child(1) > .el-form-item__content > .el-input > .el-input__inner').type('Test').click()
+    }
+
+    get descriptionInput () {
+        return cy.get(':nth-child(2) > .el-form-item__content > .el-input > .el-input__inner').type('Test').click()
+    }
+
+    get saveBtn () {
+        return cy.get('.vs-c-btn--primary').click()
+    }
+
 }
 
 export const CreateLabel = new createLabel
