@@ -1,5 +1,5 @@
 import { faker } from "@faker-js/faker";
-import { AttachLabel } from "../POM/attachLabelToTicket";
+import { AttachLabel } from "../POM/attachLabelToTicketPage";
 import { loginPage } from "../POM/loginPage";
 var email = 'jovanjovan@gmail.com';
 var password = 'jovan12345';
