@@ -51,6 +51,22 @@ class createLabel {
         return cy.get('.vs-c-btn--primary').click()
     }
 
+    get createdLabelEdit () {
+        return cy.get(':nth-child(1) > .el-table_1_column_12 > .cell > .vs-c-labels-table-worklog-cell > .vs-u-text--right > a.el-button').click()
+    }
+
+    get colorEditPanel () {
+        return cy.get('.vs-c-color-picker-indicator').click()
+    }
+
+    get colorInputClear () {
+        return cy.get('.input__input').clear()
+    }
+
+    get colorInput () {
+        return cy.get('.input__input').type('#008000')
+    }
+
     get deleteBtn () {
         return cy.get('.vs-c-btn--warning').click()
     }
