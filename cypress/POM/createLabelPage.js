@@ -1,9 +1,9 @@
 class createLabel {
-    get addNewOrganization () {
+    get addNewOrganizationPlusBtn () {
         return cy.get('.vs-c-my-organization--add-new > .vs-c-my-organization__content > .vs-c-media > .vs-c-media__object > .vs-c-my-organization__avatar').click()
     }
 
-    get organizationName () {
+    get organizationNameInput () {
         return cy.get('input').type('test').click()
     }
 
@@ -12,6 +12,10 @@ class createLabel {
     }
 
     get nextBtn () {
+        return cy.get('[name="next_btn"]').click()
+    }
+
+    get createBtn () {
         return cy.get('[name="next_btn"]').click()
     }
 
@@ -57,6 +61,26 @@ class createLabel {
 
     get backlogBtn () {
         return cy.get('[data-cy="board-backlog"] > span > div > .vs-c-site-logo').click()
+    }
+
+    get organizationBtn () {
+        return cy.get(':nth-child(2) > :nth-child(1) > :nth-child(1) > [effect="dark"] > .vs-c-list__btn').click()
+    }
+
+    get setingsBtn () {
+        return cy.get('[data-cy="organization-configuration"] > span > div > .vs-c-site-logo').click()
+    }
+
+    get deleteOrganizationBtn () {
+        return cy.get(':nth-child(8) > .vs-c-settings-section > .vs-c-settings-section-form > .vs-c-btn').click()
+    }
+
+    get modalEnterCurrentPassword () {
+        return cy.get('.vs-input-border > .el-input > .el-input__inner').type('jovan12345')
+    }
+
+    get modalDeleteOrganizationYesBtn () {
+        return cy.get('.el-button--success').click()
     }
 
     
