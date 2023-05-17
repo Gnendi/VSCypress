@@ -67,6 +67,10 @@ class createLabel {
         return cy.get('.input__input').type('#008000')
     }
 
+    get confirmBtnOnColorPanel () {
+        return cy.get(':nth-child(2) > .el-button > span').click()
+    }
+
     get deleteBtn () {
         return cy.get('.vs-c-btn--warning').click()
     }
