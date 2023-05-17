@@ -148,6 +148,8 @@ describe ('label', () => {
         .and ('have.css', 'font-family','Arial')
         CreateLabel.modalRemoveLabelYesBtn
         CreateLabel.organizationBtn
+        .should ('exist')
+        .and ('be.visible')
         CreateLabel.setingsBtn
         CreateLabel.deleteBtn
         CreateLabel.modalEnterCurrentPassword
