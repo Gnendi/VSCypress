@@ -75,6 +75,8 @@ class attachLabel {
         return cy.get('.vs-c-item-modal-close > .el-icon-close').click()
     }
 
+  
+
 }
 
 export const AttachLabel = new attachLabel
