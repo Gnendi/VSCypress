@@ -1,6 +1,7 @@
 import { faker } from "@faker-js/faker";
 import { CreateLabel } from "../POM/createLabelPage";
 import { loginPage } from "../POM/loginPage";
+
 var email = 'jovanjovan@gmail.com';
 var password = 'jovan12345';
 
