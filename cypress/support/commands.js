@@ -24,6 +24,7 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+<<<<<<< HEAD
 Cypress.Commands.add("loginBE", () => {
     cy.request({
       method: "POST",
@@ -38,3 +39,73 @@ Cypress.Commands.add("loginBE", () => {
       window.localStorage.setItem("user_id", response.body.user.id);
     });
   });
+=======
+
+Cypress.Commands.add("loginBE", () => {
+  cy.request({
+    method: "POST",
+    url: "https://cypress-api.vivifyscrum-stage.com/api/v2/login",
+    body: {
+      email: "jovanjovan@gmail.com",
+      password: "jovan12345",
+    },
+  }).then((response) => {
+    window.localStorage.setItem("token", response.body.token);
+    window.localStorage.setItem("user", JSON.stringify(response.body.user));
+    window.localStorage.setItem("user_id", response.body.user.id);
+  });
+});
+
+Cypress.Commands.add("createOrganization", (orgName) => {
+  cy.request({
+    method: "POST",
+    url: "https://cypress-api.vivifyscrum-stage.com/api/v2/organizations",
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+    },
+    body: {
+      name: orgName,
+    },
+  }).then((response) => {
+    window.localStorage.setItem("orgId", response.body.id);
+  });
+});
+
+Cypress.Commands.add("createScrumBoard", (boardName, orgId) => {
+  cy.request({
+    method: "POST",
+    url: "https://cypress-api.vivifyscrum-stage.com/api/v2/boards",
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+    },
+    body: {
+      name: boardName,
+      type: "scrum_board",
+      organization_id: orgId,
+    },
+  });
+});
+
+Cypress.Commands.add("deleteOrganization", (orgId) => {
+  cy.request({
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+    },
+    url: `https://cypress-api.vivifyscrum-stage.com/api/v2/organizations/${orgId}`,
+    body: {
+      passwordOrEmail: "jovan12345",
+    },
+  });
+});
+
+Cypress.Commands.add("deleteBoard", (boardId) => {
+  cy.request({
+    method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+    },
+    url: `https://cypress-api.vivifyscrum-stage.com/api/v2/boards/${boardId}`,
+  });
+});
+>>>>>>> 7bd229ea89d82bafc0c7cd29c4d128681cd56b0a
