@@ -4,7 +4,7 @@ Cypress.Commands.add("loginBE", () => {
     url: "https://cypress-api.vivifyscrum-stage.com/api/v2/login",
     body: {
       email: "jovanjovan@gmail.com",
-      password: "jovan12345",
+      password: "test12345",
     },
   }).then((response) => {
     window.localStorage.setItem("token", response.body.token);
@@ -68,8 +68,8 @@ Cypress.Commands.add("deleteOrganization", (orgId) => {
     },
     url: `https://cypress-api.vivifyscrum-stage.com/api/v2/organizations/${orgId}`,
     body: {
-      passwordOrEmail: "jovan12345",
-    },
+      passwordOrEmail: `test12345`
+    }
   });
 });
 

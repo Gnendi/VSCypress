@@ -116,6 +116,7 @@ class LabelPage {
     }
 
     createLabel() {
+        // cy.get('.vs-c-item-modal-close > .el-icon-close').click()
         // labelPage.addNewOrganizationPlusBtn.click()
         // .should ('exist')
         // .and ('be.visible')
@@ -252,16 +253,18 @@ class LabelPage {
         // .and ('contain.text','Delete')
         // .and ('have.css', 'font-family','Arial')
         // labelPage.modalRemoveLabelYesBtn.click()
+        // cy.wait(2000)
         // labelPage.organizationBtn.click()
         // .should ('exist')
         // .and ('be.visible')
+        // cy.get('.vs-c-modal--features-button > .vs-c-btn').click()
         // labelPage.setingsBtn.click()
         // labelPage.deleteBtn.click()
         // labelPage.modalEnterCurrentPassword.type('jovan12345')
         // labelPage.modalDeleteOrganizationYesBtn.click()
-
+        
     }
-
+    
 }
 
 export const labelPage = new LabelPage();
