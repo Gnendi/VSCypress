@@ -68,8 +68,8 @@ Cypress.Commands.add("deleteOrganization", (orgId) => {
     },
     url: `https://cypress-api.vivifyscrum-stage.com/api/v2/organizations/${orgId}`,
     body: {
-      passwordOrEmail: `test12345`
-    }
+      passwordOrEmail: "test12345",
+    },
   });
 });
 
