@@ -20,9 +20,6 @@ get addOrgModalOkBtn () {
 get createdNewOrg () {
     return cy.get(':nth-child(2) > :nth-child(1) > :nth-child(1) > [effect="dark"] > .vs-c-list__btn')
 }
-get sideBar () {
-    return cy.get ('.vb-visible')
-}
 get deleteBtn () {
     return cy.get ('.vs-c-btn--warning')
 }
