@@ -1,3 +1,5 @@
+import 'cypress-file-upload';
+
 Cypress.Commands.add("loginBE", () => {
   cy.request({
     method: "POST",
@@ -68,8 +70,8 @@ Cypress.Commands.add("deleteOrganization", (orgId) => {
     },
     url: `https://cypress-api.vivifyscrum-stage.com/api/v2/organizations/${orgId}`,
     body: {
-      passwordOrEmail: `test12345`
-    }
+      passwordOrEmail: "test12345",
+    },
   });
 });
 
