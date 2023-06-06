@@ -33,24 +33,36 @@ class DragDrop {
         return cy.get('.vs-c-item-modal-close')
     }
 
+    backlogNumberOfTask(length) {
+        return this.checkIfTaskNumberInBacklogChange
+        .children()
+        .should('have.length', length)
+    }
+
+    numberInSprintChanged(length) {
+        return this.checkIfTaskNumberInSprintChanged
+        .children()
+        .first()
+        .invoke('hide')
+        .should('have.length', length)
+    }
+
+    taskNumberBacklogChanged(number) {
+        return this.checkIfTaskNumberInBacklogChange
+        .children()
+        .should('have.length', number)
+    }
+
 
     dragAndDropSuccessuful() {
-        this.checkIfTaskNumberInBacklogChange
-        .children()
-        .should('have.length', 2)
+        this.backlogNumberOfTask(2)
         this.sprintList.should('have.class', 'vs-is-empty')
         this.myTask.click()
         this.backlogInfoField.should('have.text', 'Backlog  ')
         this.closeBtn.click()
         this.myTask.drag('.vs-is-empty')
-        this.checkIfTaskNumberInBacklogChange
-        .children()
-        .should('have.length', 1)
-        this.checkIfTaskNumberInSprintChanged
-        .children()
-        .first()
-        .invoke('hide')
-        .should('have.length', 1)
+        this.taskNumberBacklogChanged(1)
+        this.numberInSprintChanged(1)
         this.myTask.click()
         this.backlogInfoField.should('have.text', 'Sprint 1  To do ')
 
