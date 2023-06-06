@@ -35,7 +35,9 @@ class DragDrop {
 
 
     dragAndDropSuccessuful() {
-        this.checkIfTaskNumberInBacklogChange.children().should('have.length', 2)
+        this.checkIfTaskNumberInBacklogChange
+        .children()
+        .should('have.length', 2)
         this.sprintList.should('have.class', 'vs-is-empty')
         this.myTask.click()
         this.backlogInfoField.should('have.text', 'Backlog  ')
