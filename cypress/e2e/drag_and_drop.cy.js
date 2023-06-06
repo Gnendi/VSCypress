@@ -27,7 +27,7 @@ describe ('label', () => {
     })
     
     
-    // after(()=>{
-    //     cy.deleteOrganization(orgId);
-    // });
+    after(()=>{
+        cy.deleteOrganization(orgId);
+    });
 })
