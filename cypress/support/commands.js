@@ -1,3 +1,5 @@
+import '@4tw/cypress-drag-drop'
+
 Cypress.Commands.add("loginBE", () => {
   cy.request({
     method: "POST",
@@ -56,7 +58,7 @@ Cypress.Commands.add("createTask", (body) => {
     body: body
   }).then((response) => {
     console.log(response.body.code, "CODEEEEE")
-    window.localStorage.setItem("taskCode", response.body.code);
+    window.localStorage.setItem("taskId", response.body.id);
   });
 });
 
